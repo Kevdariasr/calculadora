@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadora.MainPage"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <Grid RowDefinitions="*, Auto, Auto, Auto, Auto, Auto, Auto"
+      ColumnDefinitions="*, *, *, *"
+      Padding="10">
+
+    <!-- Display -->
+    <Label x:Name="DisplayLabel"
+           Grid.Row="0"
+           Grid.ColumnSpan="4"
+           HorizontalTextAlignment="End"
+           VerticalTextAlignment="Center"
+           TextColor="White"
+           FontSize="32"
+           Padding="10"
+           Text="0" />
+
+    <!-- Calculator Buttons -->
+            <Button Text="C" Grid.Row="1" Grid.Column="1" BackgroundColor="#FF3333" Clicked="OnClearButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="%" Grid.Row="1" Grid.Column="2" BackgroundColor="#666666" Clicked="OnOperatorButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="÷" Grid.Row="1" Grid.Column="3" BackgroundColor="#666666" Clicked="OnOperatorButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+
+            <Button Text="7" Grid.Row="2" Grid.Column="0" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="8" Grid.Row="2" Grid.Column="1" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="9" Grid.Row="2" Grid.Column="2" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="×" Grid.Row="2" Grid.Column="3" BackgroundColor="#666666" Clicked="OnOperatorButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+
+            <Button Text="4" Grid.Row="3" Grid.Column="0" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="5" Grid.Row="3" Grid.Column="1" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="6" Grid.Row="3" Grid.Column="2" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="-" Grid.Row="3" Grid.Column="3" BackgroundColor="#666666" Clicked="OnOperatorButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+
+            <Button Text="1" Grid.Row="4" Grid.Column="0" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="2" Grid.Row="4" Grid.Column="1" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="3" Grid.Row="4" Grid.Column="2" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="+" Grid.Row="4" Grid.Column="3" BackgroundColor="#666666" Clicked="OnOperatorButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+
+            <Button Text="+/-" Grid.Row="5" Grid.Column="0" BackgroundColor="#666666" Clicked="OnPlusMinusButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="0" Grid.Row="5" Grid.Column="1" BackgroundColor="#333333" Clicked="OnNumberButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="." Grid.Row="5" Grid.Column="2" BackgroundColor="#666666" Clicked="OnDecimalButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+            <Button Text="=" Grid.Row="5" Grid.Column="3" BackgroundColor="#00CC66" Clicked="OnEqualButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="24"/>
+
+            <ImageButton Source="raiz.png" Grid.Row="6" Grid.Column="0" BackgroundColor="#666666" Clicked="CalcularRaizClicked" HeightRequest="80" WidthRequest="80" Padding="30" CornerRadius="20"/>
+            <ImageButton Source="potencia.png" Grid.Row="6" Grid.Column="1" BackgroundColor="#666666" Clicked="OnCalcularPotenciaClicked" HeightRequest="80" WidthRequest="80" Padding="30" CornerRadius="20"/>
+            <Button Text="Memory" Grid.Row="6" Grid.Column="2" BackgroundColor="#666666" Clicked="OnHistoryButtonClicked" HeightRequest="80" WidthRequest="80" FontSize="14" CornerRadius="20"/>
+            <Button Text="Descargar" Grid.Row="6" Grid.Column="3" BackgroundColor="#666666" Clicked="OnDownloadHistoryClicked" HeightRequest="80" WidthRequest="80" FontSize="14" CornerRadius="20"/>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
+
+
